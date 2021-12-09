@@ -27,6 +27,9 @@ void main() {
           Archive.id: (context) => const Archive(),
           "nissab": (context) => const Nissab(),
         },
+        theme: ThemeData(
+            textTheme:
+                const TextTheme(bodyText1: TextStyle(fontFamily: "ReemFuffi"))),
         home: const Home(),
         debugShowCheckedModeBanner: false,
       ),

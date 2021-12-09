@@ -97,7 +97,7 @@ class _BetailCalculatorState extends State<BetailCalculator> {
                   decoration: decoration,
                   padding: const EdgeInsets.all(2),
                   child: Text(
-                    finalResult,
+                    finalResult == "" ? "لم تبلغ النصاب" : finalResult,
                     textAlign: TextAlign.center,
                     style: const TextStyle(fontSize: 28, color: Colors.teal),
                   ),
@@ -131,7 +131,7 @@ class _BetailCalculatorState extends State<BetailCalculator> {
         }
     }
     result.forEach((key, value) {
-      finalResult += "$key $value ";
+      key == 0 ? finalResult += "" : finalResult += "$key $value ";
     });
   }
 }

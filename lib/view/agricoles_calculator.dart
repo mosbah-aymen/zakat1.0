@@ -33,32 +33,27 @@ class _AgricolesCalculatorState extends State<AgricolesCalculator> {
             textDirection: TextDirection.rtl,
             child: Column(
               children: [
-                Card(
-                  child: RadioListTile(
-                    value: true,
-                    groupValue: isNatural,
-                    title: const Text("سقي طبيعي"),
-                    subtitle: const Text("بالسيل و المطر أو الأنهار"),
-                    onChanged: (val) {
-                      setSelectedRadioTile(val);
-                    },
-                    activeColor: Colors.green.shade700,
-                    selected: isNatural,
-                  ),
+                RadioListTile(
+                  value: true,
+                  groupValue: isNatural,
+                  title: const Text("سقي طبيعي"),
+                  subtitle: const Text("بالسيل و المطر أو الأنهار"),
+                  onChanged: (val) {
+                    setSelectedRadioTile(val);
+                  },
+                  activeColor: Colors.green.shade700,
+                  selected: isNatural,
                 ),
-                Card(
-                  child: RadioListTile(
-                    value: false,
-                    groupValue: isNatural,
-                    title: const Text("سقي غير طبيعي"),
-                    subtitle:
-                        const Text("سقيت بالآلات أو الدواليب أو الحيوانات"),
-                    onChanged: (val) {
-                      setSelectedRadioTile(val);
-                    },
-                    activeColor: Colors.green.shade700,
-                    selected: !isNatural,
-                  ),
+                RadioListTile(
+                  value: false,
+                  groupValue: isNatural,
+                  title: const Text("سقي غير طبيعي"),
+                  subtitle: const Text("سقيت بالآلات أو الدواليب أو الحيوانات"),
+                  onChanged: (val) {
+                    setSelectedRadioTile(val);
+                  },
+                  activeColor: Colors.green.shade700,
+                  selected: !isNatural,
                 ),
                 InputField(
                   onChanged: (s) {
