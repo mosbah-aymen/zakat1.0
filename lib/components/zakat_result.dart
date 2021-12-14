@@ -77,13 +77,13 @@ class _ZakatResultState extends State<ZakatResult>
                   builder: (context) => widget.carat != null
                       ? ConvertToDA(
                           carat: widget.carat,
-                          gram: widget.zakat.toInt(),
+                          gram: widget.zakat.round(),
                         )
                       : const NissabBottomSheet());
             },
             child: TweenAnimationBuilder(
               tween: Tween<double>(begin: 0, end: widget.zakat),
-              duration: const Duration(seconds: 3),
+              duration: const Duration(milliseconds: 500),
               builder: (context, double duration, child) {
                 return Center(
                   child: Text(

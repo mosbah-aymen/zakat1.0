@@ -1,4 +1,4 @@
-package com.example.zakat
+package com.mosbah.zakat
 
 import io.flutter.embedding.android.FlutterActivity
 

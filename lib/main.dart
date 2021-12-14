@@ -18,6 +18,7 @@ void main() {
       MaterialApp(
         initialRoute: '/',
         routes: {
+          '/': (context) => const Home(),
           NumericCalculator.id: (context) => const NumericCalculator(),
           AgricolesCalculator.id: (context) => const AgricolesCalculator(),
           GoldCalculator.id: (context) => const GoldCalculator(),
@@ -30,7 +31,6 @@ void main() {
         theme: ThemeData(
             textTheme:
                 const TextTheme(bodyText1: TextStyle(fontFamily: "ReemFuffi"))),
-        home: const Home(),
         debugShowCheckedModeBanner: false,
       ),
     );

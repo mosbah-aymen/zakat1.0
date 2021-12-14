@@ -66,7 +66,6 @@ class _HomeState extends State<Home> {
         },
       ),
       drawer: const MyDrawer(),
-      backgroundColor: color,
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,

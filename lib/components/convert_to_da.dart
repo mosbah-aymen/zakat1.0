@@ -31,23 +31,47 @@ class ConvertToDA extends StatelessWidget {
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 26),
             ),
-            Container(
-              height: 100,
-              decoration: decoration,
-              margin: const EdgeInsets.all(3),
-              padding: const EdgeInsets.all(3),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "$gram g",
-                    style: style,
-                  ),
-                  Text(
-                    "$da DA",
-                    style: style,
-                  ),
-                ],
+            Expanded(
+              child: Container(
+                decoration: decoration,
+                margin: const EdgeInsets.all(3),
+                padding: const EdgeInsets.all(3),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            "غرام:",
+                            style: style,
+                          ),
+                          Text(
+                            "$gram ",
+                            style: style,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            "الدينار:",
+                            style: style,
+                          ),
+                          Text(
+                            "$da",
+                            style: style,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
